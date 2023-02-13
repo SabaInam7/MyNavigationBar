@@ -8,10 +8,9 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
@@ -45,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        navigationView=findViewById(R.id.nav_view);
+        navigationView=findViewById(R.id.navView);
         drawerLayout=findViewById(R.id.drawer);
 
         toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
@@ -59,32 +58,51 @@ public class MainActivity extends AppCompatActivity {
             {
                 switch (menuItem.getItemId())
                 {
-                    case R.id.nav_book :
-                        Toast.makeText(getApplicationContext(),"Retur is Clicked",Toast.LENGTH_LONG).show();
-                        Intent intent = new Intent(MainActivity.this, BookActivity.class);
+                    case R.id.nav_gitHubDetails:
+                        String url="https://github.com/SabaInam7/Assignment1.git";
+                        Intent intent= new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
                         startActivity(intent);
                         //drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 
-                    case R.id.nav_return :
-                        Toast.makeText(getApplicationContext(),"Retur is Clicked",Toast.LENGTH_LONG).show();
+                    case R.id.QuranApp:
+                         url="https://github.com/SabaInam7/Quran_App.git";
+                         intent= new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);                        break;
+
+                    case R.id.SalahTracker:
+                         url="https://github.com/SabaInam7/Group1-TrackerSalah.git";
+                         intent= new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+
+                    case R.id.Teacher_Madrissa_App:
+                         url="https://github.com/SabaInam7/TeacherMadriisaAPP.git";
+                         intent= new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case R.id.Quran_Navigation:
+                         url="https://github.com/SabaInam7/QuranNavigation.git";
+                         intent= new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
                         //drawerLayout.closeDrawer(GravityCompat.START);
                         break;
-
-                    case R.id.nav_laptop :
-                        Toast.makeText(getApplicationContext(),"Laptop is clicked",Toast.LENGTH_LONG).show();
+                    case R.id.My_Navigation_Drawer:
+                         url="https://github.com/SabaInam7/MyNavigationBar.git";
+                         intent= new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        startActivity(intent);
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 
-                    case R.id.nav_voice :
-                        Toast.makeText(getApplicationContext(),"Voice is clicked",Toast.LENGTH_LONG).show();
-                        drawerLayout.closeDrawer(GravityCompat.START);
-                        break;
 
-                    case R.id.nav_chrome_reader :
-                        Toast.makeText(getApplicationContext(),"Chrome Reader is clicked",Toast.LENGTH_LONG).show();
-                        drawerLayout.closeDrawer(GravityCompat.START);
-                        break;
                 }
 
                 return true;

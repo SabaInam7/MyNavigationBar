@@ -3,58 +3,29 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_book"
-            android:icon="@drawable/book"
-            android:title="Book" />
+            android:id="@+id/nav_gitHubDetails"
+            android:title="GitHub Details" />
 
         <item
-            android:id="@+id/nav_return"
-            android:icon="@drawable/returrn"
-            android:title="Return" />
+            android:id="@+id/QuranApp"
+            android:title="QuranApp" />
 
         <item
-            android:id="@+id/nav_laptop"
-            android:icon="@drawable/laptop"
-            android:title="Laptop" />
+            android:id="@+id/SalahTracker"
+            android:title="Group1-Salah Tracker" />
 
         <item
-            android:id="@+id/nav_voice"
-            android:icon="@drawable/voice"
-            android:title="Voice" />
+            android:id="@+id/Teacher_Madrissa_App"
+            android:title="Teacher Madrissa App" />
+        <item
+            android:id="@+id/Quran_Navigation"
+            android:title="Quran Navigation" />
+        <item
+            android:id="@+id/My_Navigation_Drawer"
+            android:title="My Navigation Drawer" />
+
 
     </group>
-
-
-    <item android:title="Reading">
-        <menu>
-            <group android:checkableBehavior="single">
-                <item
-                    android:id="@+id/nav_chrome_reader"
-                    android:icon="@drawable/chrome_reader"
-                    android:title="Chrome Reader" />
-                <item
-                    android:id="@+id/nav_rea_more"
-                    android:icon="@drawable/read_more"
-                    android:title="Read More" />
-            </group>
-        </menu>
-    </item>
-
-    <item android:title="Comments">
-        <menu>
-            <group android:checkableBehavior="single">
-                <item
-                    android:id="@+id/Nav_add_comment"
-                    android:icon="@drawable/add_comment"
-                    android:title="Add Comment" />
-                <item
-                    android:id="@+id/nav_insert_comment"
-                    android:icon="@drawable/insert_comment"
-                    android:title="Insert Comment" />
-            </group>
-        </menu>
-    </item>
-
 
 
 </menu>

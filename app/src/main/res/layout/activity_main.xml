@@ -25,13 +25,14 @@
     </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
+        android:id="@+id/navView"
         android:layout_gravity="start"
         android:layout_height="match_parent"
         android:layout_width="wrap_content"
         app:headerLayout="@layout/header"
+        tools:ignore="MissingConstraints"
         app:menu="@menu/main_menu"
-        tools:ignore="MissingConstraints" />
+         />
 
 
 

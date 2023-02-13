@@ -23,8 +23,6 @@
         <item
             android:id="@+id/My_Navigation_Drawer"
             android:title="My Navigation Drawer" />
-
-
     </group>
 
 
